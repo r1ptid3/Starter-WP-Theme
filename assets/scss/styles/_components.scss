@@ -1,0 +1,84 @@
+/*----------------------
+------ Components ------
+----------------------*/
+
+/* ----- Preloader -----*/
+.r1-preloader{
+    position: fixed;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+    background-color: #fff;
+    @include transition(all .2s ease);
+    z-index: 999;
+    opacity: 1;
+    &.hidden{
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+/* ----- Overlay -----*/
+.r1-overlay{
+	position: fixed;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+    @include transition(all .2s ease);
+    background-color: rgba(0,0,0, .85);
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    &.active{
+    	opacity: 1;
+    	pointer-events: auto;
+    }
+}
+
+/* ----- Title Styles -----*/
+.r1-title-wrapper{
+	text-align: center;
+	margin-bottom: 3.75rem;
+	.r1-title{
+		display: inline-block;
+		border-bottom: 1px solid #000;
+	}
+}
+
+/* ----- Button Up -----*/
+.r1-button-up{
+    position: fixed;
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    background-color: #fff;
+    border: 2px solid #000;
+    @include border-radius(50%);
+    @include inline-flex(center, center);
+    right: 2rem;
+    bottom: -6rem;
+    cursor: pointer;
+    @include transition(all .3s ease-in, background-color .2s ease);
+    z-index: 2;
+    &:hover{
+        @include transform(translateY(-0.5rem));
+    }
+    &.active{
+        bottom: 2rem;
+    }
+}
+@media screen and (max-width: 767px) {
+    .r1-button-up{
+        width: 40px;
+        height: 40px;
+        right: 15px;
+        img{
+            width: 14px;
+        }
+        &:before{
+            position: relative;
+            top: -2px;
+        }
+        &.active{
+            bottom: 15px;
+        }
+    }   
+}

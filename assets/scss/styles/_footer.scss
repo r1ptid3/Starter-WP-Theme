@@ -1,0 +1,12 @@
+/*---- Footer Styles ----*/
+.r1-footer{
+    padding: 1rem;
+    text-align: center;
+    margin-top: 3.75rem;
+    border-top: 1px solid #000;
+    &.stick-to-bottom{
+        bottom: 0;
+        position: fixed;
+        left: 0; right: 0;
+    }
+}

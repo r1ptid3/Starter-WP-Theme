@@ -1,0 +1,10 @@
+$mq-breakpoints: (
+    mobile:          320px,
+    tabletPortrait:  768px,
+    tabletLandscape: 992px,
+    desktop:         1200px
+);
+
+$mq-static-breakpoint: desktop;
+
+$mq-show-breakpoints: (mobile tabletPortrait tabletLandscape desktop);

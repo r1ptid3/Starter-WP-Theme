@@ -1,0 +1,36 @@
+/* ----- Main Layout Styles ----- */
+body{
+	display: grid;
+	min-height: 100vh;
+    grid-template-columns: 100%;
+	grid-template-rows: auto 1fr auto;
+	&.admin-bar{
+		min-height: calc( 100vh - 32px );
+	}
+}
+.r1-main{
+	width: 100%;
+}
+.r1-container{
+    width: 75rem;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0 0.938rem;
+}
+
+/* ----- Main Layout Media Queries ----- */
+@include mq($until: desktop) { // max-width: 1199px
+	.r1-container{
+    	width: 62rem;
+	}
+}
+@include mq($until: tabletLandscape) { // max-width: 992px
+	.r1-container{
+    	width: 48rem;
+	}
+}
+@include mq($until: tabletPortrait) { // max-width: 767px
+	.r1-container{
+    	width: 100%;
+	}
+}

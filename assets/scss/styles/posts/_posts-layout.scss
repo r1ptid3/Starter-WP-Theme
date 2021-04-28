@@ -1,0 +1,31 @@
+/*---- Post Layout Styles ----*/
+.r1-section-posts{
+	&.grid{
+		margin: 0 -1.875rem -3.75rem;
+		@include flex(row, wrap, flex-start, stretch);
+		&.columns-2{
+			.r1-post{
+				width: calc( 50% - 3.75rem );
+			}
+		}
+		&.columns-3{
+			.r1-post{
+				width: calc( 33.3% - 3.75rem );	
+			}	
+		}
+		&.columns-4{
+			.r1-post{
+				width: calc( 25% - 3.75rem );
+			}
+		}
+		.r1-post{
+			display: grid;
+			margin: 0 1.875rem 3.75rem;
+			grid-template-columns: 100%;
+			grid-template-rows: auto auto 1fr auto;
+			.post-meta{
+				grid-row: 4;
+			}
+		}
+	}
+}

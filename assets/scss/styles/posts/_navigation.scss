@@ -1,0 +1,54 @@
+/*---- Navigation Styles ----*/
+.post-navigation{
+	margin-top: 3.75rem;
+	padding: 1.875rem 0;
+	border-width: 1px 0;
+	border-style: solid;
+	border-color: rgba(0,0,0, .2);
+	.nav-links{
+		@include flex(row, nowrap, space-between, center);
+		li{
+			padding-left: 0;
+			width: calc(50% - 1.875rem);
+			&:before{
+				display: none;
+			}
+			&.prev-post{
+				@include inline-flex(flex-start, center);
+				.post-navigation__thumb{
+					margin-right: 1.875rem;
+				}
+			}
+			&.next-post{
+				text-align: right;
+				@include inline-flex(flex-end, center);
+				.post-navigation__thumb{
+					margin-left: 1.875rem;
+				}
+			}
+			&.disabled{
+
+			}
+		}
+	}
+	&__thumb{
+		font-size: 0;
+		line-height: 0;
+		max-width: 6.25rem;
+	}
+	&__text{
+		a{
+			display: inline-block;
+			span{
+				display: block;
+				&.post-link{
+
+				}
+				&.post-title{
+					margin-top: 0.5em;
+					font-size: 1.25rem;
+				}
+			}
+		}
+	}
+}

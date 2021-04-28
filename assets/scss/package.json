@@ -1,0 +1,32 @@
+{
+  "name": "sample",
+  "version": "1.0.0",
+  "description": "r1ptid3's starter WP Theme",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r1ptid3/Starter-WP-Theme.git"
+  },
+  "keywords": [
+    "starter-theme",
+    "wordpress",
+    "WP",
+    "theme",
+    "template"
+  ],
+  "author": "r1ptid3",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/r1ptid3/Starter-WP-Theme/issues"
+  },
+  "homepage": "https://github.com/r1ptid3/Starter-WP-Theme#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "sass-mq": "^5.0.1"
+  }
+}

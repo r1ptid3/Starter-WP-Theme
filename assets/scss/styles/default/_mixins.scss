@@ -1,0 +1,183 @@
+/*---- Mixins ----*/
+@mixin clearfix {
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin order($order){
+	-ms-flex-order: $order;
+	 -webkit-order: $order;
+			 order: $order;
+}
+
+@mixin flex-shrink($shrink){
+	-webkit-flex-shrink: $shrink;
+	   -moz-flex-shrink: $shrink;
+		-ms-flex-shrink: $shrink;
+			flex-shrink: $shrink;
+}
+
+@mixin flex($direction, $wrap, $justify, $align){
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+
+	-webkit-flex-direction: $direction;
+	   -moz-flex-direction: $direction;
+		-ms-flex-direction: $direction;
+			flex-direction: $direction;
+
+	-webkit-flex-wrap: $wrap;
+	   -moz-flex-wrap: $wrap;
+		-ms-flex-wrap: $wrap;
+			flex-wrap: $wrap;
+
+	-webkit-justify-content: $justify;
+	   -moz-justify-content: $justify;
+		-ms-justify-content: $justify;
+			justify-content: $justify;
+
+	-webkit-align-items: $align;
+	   -moz-align-items: $align;
+		-ms-align-items: $align;
+			align-items: $align;
+}
+
+@mixin flex-important($direction, $wrap, $justify, $align){
+	display: -webkit-box !important;
+	display: -moz-box !important;
+	display: -webkit-flex !important;
+	display: -ms-flexbox !important;
+	display: flex !important;
+
+	-webkit-flex-direction: $direction;
+	   -moz-flex-direction: $direction;
+		-ms-flex-direction: $direction;
+			flex-direction: $direction;
+
+	-webkit-flex-wrap: $wrap;
+	   -moz-flex-wrap: $wrap;
+		-ms-flex-wrap: $wrap;
+			flex-wrap: $wrap;
+
+	-webkit-justify-content: $justify;
+	   -moz-justify-content: $justify;
+		-ms-justify-content: $justify;
+			justify-content: $justify;
+
+	-webkit-align-items: $align;
+	   -moz-align-items: $align;
+		-ms-align-items: $align;
+			align-items: $align;
+}
+
+@mixin inline-flex($justify, $align){
+	display: -webkit-inline-flex;
+	display: inline-flex;
+
+	-webkit-justify-content: $justify;
+	   -moz-justify-content: $justify;
+		-ms-justify-content: $justify;
+			justify-content: $justify;
+
+	-webkit-align-items: $align;
+	   -moz-align-items: $align;
+		-ms-align-items: $align;
+			align-items: $align;
+}
+
+@mixin flex-direction($direction){
+	-webkit-flex-direction: $direction;
+	   -moz-flex-direction: $direction;
+		-ms-flex-direction: $direction;
+			flex-direction: $direction;
+}
+
+@mixin justify-content($justify){
+	-webkit-justify-content: $justify;
+	   -moz-justify-content: $justify;
+		-ms-justify-content: $justify;
+			justify-content: $justify;
+}
+
+@mixin align-items($align){
+	-webkit-align-items: $align;
+	   -moz-align-items: $align;
+		-ms-align-items: $align;
+			align-items: $align;
+}
+
+@mixin flex-wrap($wrap){
+	-webkit-flex-wrap: $wrap;
+	   -moz-flex-wrap: $wrap;
+		-ms-flex-wrap: $wrap;
+			flex-wrap: $wrap;
+}
+
+@mixin simple-flex($flex){
+	-ms-flex-wrap: $flex;
+	 -webkit-flex: $flex;
+	 	 -ms-flex: $flex;
+	 		 flex: $flex;
+}
+
+@mixin border-radius($radius){
+	-webkit-border-radius: $radius;
+			border-radius: $radius;
+}
+
+@mixin linear-gradient($direction, $col1, $col2...){
+	background: -webkit-linear-gradient($direction, $col1, $col2);
+	background: 		linear-gradient($direction, $col1, $col2);
+}
+
+@mixin box-sizing{
+	-moz-box-sizing: border-box;
+		 box-sizing: border-box;
+}
+
+@mixin box-shadow($param){
+	-webkit-box-shadow: $param;
+	   -moz-box-shadow: $param;
+			box-shadow: $param;
+}
+
+@mixin transition($transition...){
+	-webkit-transition: #{$transition};
+	   -moz-transition: #{$transition};
+		-ms-transition: #{$transition};
+		 -o-transition: #{$transition};
+			transition: #{$transition};
+}
+
+@mixin transition-duration($duration){
+	-webkit-transition-duration: $duration;
+       -moz-transition-duration: $duration;
+    	 -o-transition-duration: $duration;
+    		transition-duration: $duration;
+}
+
+@mixin transition-timing-function($timing){
+	-webkit-transition-timing-function: $timing;
+       -moz-transition-timing-function: $timing;
+    	 -o-transition-timing-function: $timing;
+    		transition-timing-function: $timing;
+}
+
+@mixin transition-delay($delay){
+	-webkit-transition-delay: $delay;
+       -moz-transition-delay: $delay;
+    	 -o-transition-delay: $delay;
+    		transition-delay: $delay;
+}
+
+@mixin transform($transform){
+	-webkit-transform: $transform;
+		-ms-transform: $transform;
+			transform: $transform;
+}

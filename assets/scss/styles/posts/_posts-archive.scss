@@ -1,0 +1,74 @@
+/*---- Post Archive Styles ----*/
+.r1-post{
+	.post-featured-wrapper{
+		font-size: 0;
+		line-height: 0;
+		position: relative;
+		.post-featured{
+			img{
+
+			}
+		}
+		.post-categories{
+			top: 20px;
+			left: 20px;
+			position: absolute;
+			@include inline-flex(flex-start, center);
+			a{
+				font-size: 1rem;
+				line-height: 1.5;
+				padding: 0 .5em;
+				margin-left: 1rem;
+				background-color: #fff;
+				&:first-child{
+					margin-left: 0;
+				}
+			}
+		}
+	}
+	.post-title{
+		margin: 1rem 0 0.75rem;
+		&:first-child{
+			margin-top: 0;
+		}
+	}
+	.post-content-wrapper{
+		.blog-readmore{
+
+		}
+	}
+	.post-meta{
+		width: 100%;
+		padding: 1rem 0;
+		margin-top: 1rem;
+		border-top: 1px solid #000;
+		@include inline-flex(flex-start, center);
+		> *{
+			margin-left: 1.875rem;
+			&:first-child{
+				margin-left: 0;
+			}
+		}
+		.post-author{
+			@include inline-flex(flex-start, center);
+			img{
+				max-width: 1.875rem;
+				margin-right: 0.5rem;
+				@include border-radius(50%);
+			}
+			a{
+
+			}
+		}
+		.post-date{
+			a{
+
+			}
+		}
+		.post-coments-count{
+			a{
+
+			}
+		}
+	}
+}

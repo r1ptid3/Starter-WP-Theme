@@ -1,0 +1,125 @@
+/*----- Default styles -----*/
+body, button, input, select, optgroup, textarea{
+    color: $main;
+    font-family: 'Circe', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+body {
+    min-width: 320px;
+    &.r1-disable-scroll{
+        overflow: hidden;
+        .r1-button-up{
+            pointer-events: none;
+            opacity: .5;
+        }
+    }
+}
+* {
+    @include box-sizing();
+    outline: none !important;
+    -webkit-font-smoothing: antialiased;
+}
+input[type="number"],
+input[type="submit"],
+input[type="button"],
+input[type="password"],
+input[type="text"],
+input[type="tel"],
+input[type="time"],
+input[type="email"],
+input[type="url"],
+textarea{
+    width: 100%;
+    color: $main;
+    line-height: 1.5em;
+    padding: 0.625em 1.25em;
+    background-color: #eef9ff;
+    border: 3px solid #9ebfdc;
+    @include border-radius(0.625em);
+}
+/* All browsers except Edge */
+@supports not (-ms-ime-align:auto) {
+    input::placeholder,
+    select::placeholder,
+    textarea::placeholder{
+        color: #666666 !important;
+        opacity: .8 !important;
+    }
+}
+main{
+    position: relative;
+    z-index: 2;
+}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6{
+    margin-top: 1em;
+    margin-bottom: 0.75em;
+    line-height: initial;
+    &:first-child{
+        margin-top: 0;
+    }
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+h1, .h1{
+    font-size: 3em;
+}
+h2, .h2{
+    font-size: 2.5em;
+}
+h3, .h3{
+    font-size: 2.125em;
+}
+h4, .h4{
+    font-size: 1.75em;
+}
+h5, .h5{
+    font-size: 1.5em;
+}
+h6, .h6{
+    font-size: 1.25em;
+}
+ul, ol, blockquote, address, pre, p{
+    margin-bottom: 1.7em;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+a{
+    color: $main;
+    @include transition(all .25s ease-in);
+}
+.r1-main{
+    ul{
+        li{
+            position: relative;
+            padding-left: 1.5em;
+            &:not(:last-child){
+                margin-bottom: 0.625em;
+            }
+            &:before{
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0.25em;
+                width: 0.5em;
+                height: 0.5em;
+                background-color: $accent;
+            }
+        }
+    }
+}
+.alignleft{
+    float: left;
+    margin-right: 1.875rem;
+    margin-left: 3.125rem;
+}
+.aligncenter{
+    text-align: center;
+}
+.alignright{
+    float: right;
+    margin-left: 1.875rem;
+    margin-right: 3.125rem;
+}

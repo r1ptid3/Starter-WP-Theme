@@ -1,0 +1,10 @@
+/* ----- Default widget styles ----- */
+.r1-widget{
+	padding: 1.875rem;
+	border: 1px solid #000;
+	&__title{
+		text-align: center;
+		font-size: 1.75rem;
+		line-height: initial;
+	}
+}

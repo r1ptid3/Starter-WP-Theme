@@ -1,0 +1,43 @@
+/* ----- Sidebar Styles ----- */
+body{
+	&.admin-bar{
+		.r1-content-wrapper{
+			> aside{
+				top: calc( 1.875rem + 32px );
+			}
+		}
+	}
+}
+.r1-content-wrapper{
+	@include flex(row-reverse, nowrap, space-between, flex-start);
+	> aside{
+		top: 1.875rem;
+		position: -webkit-sticky;
+		position: sticky;
+		width: 18.750rem;
+		margin-left: 3.75rem;
+		@include flex-shrink(0);
+	}
+}
+
+/* ----- Sidebar Media Queries ----- */
+@include mq($until: tabletLandscape) { // max-width: 992px
+	.r1-container{
+    	width: 48rem;
+	}
+	.r1-content-wrapper{
+		display: block;
+		> aside{
+			top: 0;
+			z-index: 5;
+			position: fixed;
+			padding: 1.875em;
+			right: -18.750rem;
+			background-color: #fff;
+			height: 100vh;
+			&.active{
+				right: 0;
+			}
+		}
+	}
+}
