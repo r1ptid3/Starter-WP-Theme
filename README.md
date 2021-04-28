@@ -24,13 +24,13 @@ Theme has been written using phpcs with WordPress standard. You can find more in
 # Theme features
 1. Theme includes custom functions in inc/post-functions.php which allows to receive default post informations like: 
   - Featured image with availability to crop image into square and load it through WordPress media uploader which creates smaller images. 
-    Image returns in <img> tag with sizes and scrset attributes which upgrade you site loading speed;
-  - Title;
-  - Categories;
-  - Author;
-  - Date;
-  - Comments;
-  - Excerpt / Content with availability to set maximum chars length and added "Read more" button with changeable title.
+    Image returns in <img> tag with sizes and scrset attributes which upgrade you site loading speed
+  - Title
+  - Categories
+  - Author
+  - Date
+  - Comments
+  - Excerpt / Content with availability to set maximum chars length and added "Read more" button with changeable title
 2. Theme includes custom posts navigation in template-parts/content-navigation.php
 
 # Multilanguage
