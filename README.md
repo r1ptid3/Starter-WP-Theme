@@ -37,3 +37,25 @@ Theme has been written using phpcs with WordPress standard. You can find more in
 I think that is the best way to create multilanguage theme is using
 POEditor ( https://poeditor.com ) and 
 Loco Translate WordPress Plugin ( https://wordpress.org/plugins/loco-translate/ )
+
+# Security ( Features & Tips )
+1. Features in inc/hooking-functions.php
+  - Removed WP version from <head> tag
+  - Changed message on login page after wrong entered data
+2. wp-config.php
+  - Disable WP_DEBUG on production
+  - Use secure FTPS or SSH connections.
+3. .htaccess
+  - Disable .php files execution in /wp-includes/ and /wp-content/uploads/
+  - Disable site folders browsing
+  - Disable access to author name via ID
+  - Disable server information
+4. Tips
+  - Do not use "admin" as a login and use strong passwords
+  - Change default wp_ table prefix on new theme installation
+  - Remove readme.html which contains information about WP version
+  - Make sure that all outup data is sanitized
+  - Use wp_nonce fields in custom forms
+  - Setup an automatic backups
+  - Use hide login page plugin as an example WPS Hide Login
+  - Use login limitation tries plugin as an example WPS Limit Login
