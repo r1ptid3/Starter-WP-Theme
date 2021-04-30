@@ -29,3 +29,23 @@ function sample_body_classes( array $classes ): array {
 	return $classes;
 }
 add_filter( 'body_class', 'sample_body_classes' );
+
+/**
+ * Remove WP version.
+ *
+ * @return string
+ */
+function remove_wp_version(): string {
+	return '';
+}
+add_filter( 'the_generator', 'remove_wp_version' );
+
+/**
+ * Return custom message on login.
+ *
+ * @return string
+ */
+function no_wordpress_errors() {
+	return esc_html__( 'Wrong password or login', 'sample' );
+}
+add_filter( 'login_errors', 'no_wordpress_errors' );
