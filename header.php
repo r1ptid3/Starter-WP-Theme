@@ -14,6 +14,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die;
 }
 
+$options = class_exists( 'Polylang' ) ? 'options-' . pll_current_language( 'slug' ) : 'options-en';
+
 ?>
 
 <!DOCTYPE html>

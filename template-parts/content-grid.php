@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			'article',
 			array(
 				'columns'    => '3',
-				'square_img' => true,
+				'square_img' => false,
 				'btn_title'  => esc_html( $args['btn_title'] ),
 				'length'     => esc_attr( $args['length'] ),
 			)

@@ -166,6 +166,25 @@ function sample_assets(): void {
 }
 add_action( 'wp_enqueue_scripts', 'sample_assets' );
 
+/**
+ * Create ACF Option pages for each language.
+ *
+ * @since  1.0.0
+ */
+if ( class_exists( 'ACF' ) ) {
+
+	// Add same code below for each language.
+	acf_add_options_sub_page(
+		array(
+			'page_title' => 'Options En',
+			'menu_title' => 'Options En',
+			'menu_slug'  => 'options-en',
+			'post_id'    => 'options-en',
+		)
+	);
+
+}
+
 
 /**
  * Functions which enhance the theme by hooking into WordPress.
